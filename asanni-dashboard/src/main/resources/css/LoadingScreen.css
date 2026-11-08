@@ -1,0 +1,10 @@
+/* ===== Full-Screen GIF Loading Screen ===== */
+.loading-root {
+    -fx-background-color: #CBC7BF;
+    -fx-alignment: center;
+    -fx-padding: 0;
+}
+
+.loading-gif {
+    -fx-smooth: true;
+}

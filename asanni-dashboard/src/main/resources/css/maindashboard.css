@@ -1,0 +1,272 @@
+/* ===== Root & Layout Surfaces (Light Mode Theme) ===== */
+.dashboard-root {
+    -fx-background-color: #CBC7BF;
+}
+
+/* ===== Loading Screen ===== */
+.loading-text {
+    -fx-font-size: 18px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #111111;
+}
+
+.top-navbar {
+    -fx-background-color: #FAF9F6;
+    -fx-background-radius: 18px;
+    -fx-border-radius: 18px;
+    -fx-border-color: #E2DFD9;
+    -fx-border-width: 1px;
+    -fx-padding: 12px 20px;
+}
+
+.surface-card {
+    -fx-background-color: #EFECE6;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-border-color: #DFDCD6;
+    -fx-border-width: 1px;
+    -fx-padding: 24px;
+}
+
+.header-banner-card {
+    -fx-background-color: #FAF9F6;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-border-color: #E2DFD9;
+    -fx-border-width: 1px;
+    -fx-padding: 24px 28px;
+}
+
+/* ===== Typography ===== */
+.eyebrow-red {
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #B3262E;
+    -fx-letter-spacing: 0.5px;
+}
+
+.brand-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111111;
+}
+
+.sidebar-heading {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111111;
+    -fx-wrap-text: true;
+}
+
+.muted-text {
+    -fx-font-size: 13px;
+    -fx-text-fill: #6E6A63;
+    -fx-wrap-text: true;
+}
+
+/* ===== Top Navbar Badges & Buttons ===== */
+.logo-badge {
+    -fx-background-color: #B3262E;
+    -fx-background-radius: 10px;
+    -fx-min-width: 38px;
+    -fx-min-height: 38px;
+    -fx-alignment: center;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+}
+
+.avatar-circle {
+    -fx-background-color: #B3262E;
+    -fx-background-radius: 50px;
+    -fx-min-width: 38px;
+    -fx-min-height: 38px;
+    -fx-alignment: center;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+}
+
+.pill-button-outline {
+    -fx-background-color: #FAF9F6;
+    -fx-border-color: #DEDAD3;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-padding: 7px 16px;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111111;
+    -fx-cursor: hand;
+}
+
+.pill-button-outline:hover {
+    -fx-background-color: #FFFFFF;
+}
+
+/* ===== Left Sidebar Quick Access Cards ===== */
+.nav-card {
+    -fx-background-color: #FAF9F6;
+    -fx-background-radius: 16px;
+    -fx-border-radius: 16px;
+    -fx-border-color: #E2DFD9;
+    -fx-border-width: 1px;
+    -fx-padding: 14px 16px;
+    -fx-cursor: hand;
+}
+
+.nav-card:hover {
+    -fx-background-color: #FFFFFF;
+}
+
+.nav-card-active {
+    -fx-background-color: #F4DFDF;
+    -fx-border-color: #E4C3C4;
+    -fx-border-width: 1.2px;
+}
+
+.nav-icon-active {
+    -fx-background-color: #B3262E;
+    -fx-background-radius: 50px;
+    -fx-min-width: 32px;
+    -fx-min-height: 32px;
+    -fx-max-width: 32px;
+    -fx-max-height: 32px;
+    -fx-alignment: center;
+}
+
+.nav-icon-default {
+    -fx-background-color: #EFECE6;
+    -fx-background-radius: 50px;
+    -fx-min-width: 32px;
+    -fx-min-height: 32px;
+    -fx-max-width: 32px;
+    -fx-max-height: 32px;
+    -fx-alignment: center;
+}
+
+.nav-title {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111111;
+}
+
+.nav-subtitle {
+    -fx-font-size: 12px;
+    -fx-text-fill: #6E6A63;
+}
+
+.nav-subtitle-active {
+    -fx-font-size: 12px;
+    -fx-text-fill: #5C4344;
+}
+
+/* ===== 3 Metric Stat Cards (18 / 6 / 12) ===== */
+.metric-card {
+    -fx-background-color: #FAF9F6;
+    -fx-background-radius: 18px;
+    -fx-border-radius: 18px;
+    -fx-border-color: #E2DFD9;
+    -fx-border-width: 1px;
+    -fx-padding: 20px 22px;
+}
+
+.metric-value {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111111;
+}
+
+.metric-caption {
+    -fx-font-size: 13px;
+    -fx-text-fill: #6E6A63;
+}
+
+/* ===== 2 Action Cards (Update tables / Set wait time) ===== */
+.action-card-primary {
+    -fx-background-color: #B3262E;
+    -fx-background-radius: 18px;
+    -fx-border-radius: 18px;
+    -fx-border-color: #9A1F26;
+    -fx-border-width: 1px;
+    -fx-padding: 20px 22px;
+    -fx-cursor: hand;
+}
+
+.action-card-primary:hover {
+    -fx-background-color: #9A1F26;
+}
+
+.action-title-primary {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+}
+
+.action-card-secondary {
+    -fx-background-color: #FAF9F6;
+    -fx-background-radius: 18px;
+    -fx-border-radius: 18px;
+    -fx-border-color: #E2DFD9;
+    -fx-border-width: 1px;
+    -fx-padding: 20px 22px;
+    -fx-cursor: hand;
+}
+
+.action-card-secondary:hover {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #CFCBC2;
+}
+
+.action-title-secondary {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111111;
+}
+
+/* ===== Service Pulse Card & Bar Chart ===== */
+.pulse-card {
+    -fx-background-color: #FAF9F6;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-border-color: #E2DFD9;
+    -fx-border-width: 1px;
+    -fx-padding: 24px 26px;
+}
+
+.pulse-heading {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111111;
+}
+
+.pulse-today-label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #B3262E;
+}
+
+.pulse-views-count {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111111;
+}
+
+.pulse-bar {
+    -fx-background-color: #DEDAD0;
+    -fx-background-radius: 10px;
+    -fx-cursor: hand;
+}
+
+.pulse-bar:hover {
+    -fx-background-color: #CBC5B9;
+}
+
+.pulse-bar-active {
+    -fx-background-color: #B3262E;
+}
+
+.pulse-bar-active:hover {
+    -fx-background-color: #9A1F26;
+}

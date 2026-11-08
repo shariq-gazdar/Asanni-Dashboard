@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" vbarPolicy="AS_NEEDED"
+            prefHeight="840.0" prefWidth="1220.0"
+            style="-fx-background: #CBC7BF; -fx-background-color: #CBC7BF;"
+            stylesheets="@../css/global.css,@../css/signup.css"
+            xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.asanni.dashboard.controllers.SignupController">
+
+    <VBox spacing="18.0" styleClass="onboarding-root">
+        <padding>
+            <Insets bottom="24.0" left="28.0" right="28.0" top="20.0"/>
+        </padding>
+
+        <!-- ==================== TOP NAVBAR ==================== -->
+        <HBox alignment="CENTER_LEFT" spacing="14.0" styleClass="top-navbar">
+            <Label styleClass="logo-badge" text="AS"/>
+            <VBox alignment="CENTER_LEFT" spacing="1.0">
+                <Label styleClass="eyebrow-red" text="PARTNER PORTAL"/>
+                <Label fx:id="navBrandLabel" styleClass="brand-title" text="Asanni"/>
+            </VBox>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <Button onAction="#openLogin" styleClass="pill-button-outline" text="Help" graphicTextGap="8.0">
+                <graphic>
+                    <SVGPath content="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"
+                             fill="#111111" scaleX="0.75" scaleY="0.75"/>
+                </graphic>
+            </Button>
+            <Label styleClass="avatar-circle" text="OA"/>
+        </HBox>
+
+        <!-- ==================== MAIN CONTENT AREA ==================== -->
+        <HBox spacing="20.0" VBox.vgrow="ALWAYS">
+
+            <!-- LEFT SIDEBAR (ONBOARDING STEPS) -->
+            <VBox minWidth="265.0" prefWidth="265.0" spacing="16.0" styleClass="surface-card">
+                <VBox spacing="6.0">
+                    <Label styleClass="eyebrow-red" text="ONBOARDING"/>
+                    <Label styleClass="sidebar-heading" text="Restaurant profile"/>
+                    <Label styleClass="muted-text" text="Tell Karachi who you are and where customers can find you."/>
+                </VBox>
+
+                <VBox spacing="10.0">
+                    <VBox.margin>
+                        <Insets top="8.0"/>
+                    </VBox.margin>
+
+                    <!-- Step 1 -->
+                    <HBox fx:id="step1Button" alignment="CENTER_LEFT" spacing="12.0" styleClass="step-card" onMouseClicked="#handleStep1Click">
+                        <Label styleClass="step-number-done" text="1"/>
+                        <VBox spacing="2.0">
+                            <Label styleClass="step-title" text="Service plan"/>
+                            <Label styleClass="step-status" text="Completed"/>
+                        </VBox>
+                    </HBox>
+
+                    <!-- Step 2 (Active) -->
+                    <HBox alignment="CENTER_LEFT" spacing="12.0" styleClass="step-card, step-card-active">
+                        <Label styleClass="step-number-active" text="2"/>
+                        <VBox spacing="2.0">
+                            <Label styleClass="step-title" text="Restaurant profile"/>
+                            <Label styleClass="step-status" text="Current step"/>
+                        </VBox>
+                    </HBox>
+
+                    <!-- Step 3 -->
+                    <HBox alignment="CENTER_LEFT" spacing="12.0" styleClass="step-card">
+                        <Label styleClass="step-number-done" text="3"/>
+                        <VBox spacing="2.0">
+                            <Label styleClass="step-title" text="Featured listing"/>
+                            <Label styleClass="step-status" text="Next step"/>
+                        </VBox>
+                    </HBox>
+                </VBox>
+            </VBox>
+
+            <!-- RIGHT WORKSPACE -->
+            <VBox spacing="20.0" HBox.hgrow="ALWAYS">
+
+                <!-- TOP STEP BANNER -->
+                <VBox spacing="6.0" styleClass="header-banner-card">
+                    <Label styleClass="eyebrow-red" text="STEP 2 OF 3"/>
+                    <Label styleClass="heading" text="Tell Karachi who you are."/>
+                    <Label styleClass="subtitle" text="This information appears in search, map and directions."/>
+                </VBox>
+
+                <!-- SPLIT BOTTOM CARDS -->
+                <HBox spacing="20.0" VBox.vgrow="ALWAYS">
+
+                    <!-- CENTER FORM CARD -->
+                    <VBox spacing="16.0" styleClass="surface-card" HBox.hgrow="ALWAYS">
+
+                        <!-- Logo URL Field -->
+                        <VBox spacing="6.0">
+                            <Label styleClass="section-label" text="Restaurant logo URL"/>
+                            <TextField fx:id="logoUrlField" promptText="Enter logo image URL" styleClass="clean-text-field"/>
+                        </VBox>
+
+                        <!-- Restaurant Name -->
+                        <VBox spacing="6.0">
+                            <Label styleClass="section-label" text="Restaurant name"/>
+                            <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="input-box-wrapper">
+                                <SVGPath content="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z"
+                                         fill="#7A756E" scaleX="0.75" scaleY="0.75"/>
+                                <TextField fx:id="nameField" promptText="Enter restaurant name" text="Asanni"
+                                           styleClass="embedded-text-field" HBox.hgrow="ALWAYS"/>
+                                <SVGPath content="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                                         fill="#7A756E" scaleX="0.75" scaleY="0.75"/>
+                            </HBox>
+                        </VBox>
+
+                        <!-- Primary Cuisine (mapped to descriptionField) -->
+                        <VBox spacing="6.0">
+                            <Label styleClass="section-label" text="Primary cuisine"/>
+                            <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="input-box-wrapper">
+                                <SVGPath content="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"
+                                         fill="#7A756E" scaleX="0.75" scaleY="0.75"/>
+                                <TextField fx:id="descriptionField" promptText="Enter primary cuisine" text="Mediterranean"
+                                           styleClass="embedded-text-field" HBox.hgrow="ALWAYS"/>
+                                <SVGPath content="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+                                         fill="#7A756E" scaleX="0.75" scaleY="0.75"/>
+                            </HBox>
+                        </VBox>
+
+                        <!-- Location -->
+                        <VBox spacing="6.0">
+                            <Label styleClass="section-label" text="Location"/>
+                            
+                            <!-- City & Area Row -->
+                            <HBox spacing="14.0">
+                                <VBox spacing="6.0" HBox.hgrow="ALWAYS">
+                                    <Label styleClass="section-label" text="City"/>
+                                    <ComboBox fx:id="cityComboBox" promptText="Select city" maxWidth="Infinity" styleClass="clean-text-field"/>
+                                </VBox>
+                                <VBox spacing="6.0" HBox.hgrow="ALWAYS">
+                                    <Label styleClass="section-label" text="Area"/>
+                                    <ComboBox fx:id="areaComboBox" promptText="Select area" maxWidth="Infinity" styleClass="clean-text-field"/>
+                                </VBox>
+                            </HBox>
+
+                            <!-- Address with Fetch Location Button -->
+                            <VBox spacing="6.0">
+                                <Label styleClass="section-label" text="Address"/>
+                                <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="input-box-wrapper">
+                                    <Button onAction="#detectLocation" styleClass="icon-button-transparent"
+                                            style="-fx-padding: 0;">
+                                        <graphic>
+                                            <SVGPath content="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                                                     fill="#7A756E" scaleX="0.8" scaleY="0.8"/>
+                                        </graphic>
+                                    </Button>
+                                    <TextField fx:id="addressField" promptText="Enter your address" styleClass="embedded-text-field" HBox.hgrow="ALWAYS"/>
+                                </HBox>
+                                <Label fx:id="locationStatusLabel" styleClass="muted-text-small"
+                                       text=""/>
+                            </VBox>
+                        </VBox>
+
+                        <!-- Phone -->
+                        <VBox spacing="6.0">
+                            <Label styleClass="section-label" text="Phone"/>
+                            <TextField fx:id="phoneField" promptText="021 3582 4414" text="021 3582 4414"
+                                       styleClass="clean-text-field"/>
+                        </VBox>
+                        <!-- Number Of Tables -->
+                        <VBox spacing="6.0">
+                            <Label styleClass="section-label" text="Number Of Tables"/>
+                            <TextField fx:id="numberOfTablesField" promptText="Enter number of tables" text="10"
+                                       styleClass="clean-text-field"/>
+                        </VBox>
+
+                        <!-- Per Head Checkbox -->
+                        <VBox spacing="6.0">
+                            <CheckBox fx:id="perheadCheckBox" text="Per head pricing"/>
+                            <TextField fx:id="perheadPriceField" promptText="Enter per head price" visible="false" styleClass="clean-text-field"/>
+                        </VBox>
+
+                        <!-- Status / Error Message Label -->
+                        <Label fx:id="messageLabel" styleClass="error-message" wrapText="true" maxWidth="Infinity"/>
+
+                        <!-- Save and Continue Button -->
+                        <Button fx:id="saveButton" maxWidth="Infinity" onAction="#handleSignup"
+                                styleClass="publish-button" text="Save and continue"/>
+                    </VBox>
+
+                    <!-- RIGHT CARD: FEATURED PREVIEW -->
+                    <VBox minWidth="320.0" prefWidth="320.0" spacing="14.0" styleClass="surface-card">
+                        <Label styleClass="eyebrow-red" text="FEATURED PREVIEW"/>
+
+                        <!-- Sub-card 1: Live Preview Box -->
+                        <VBox spacing="6.0" styleClass="preview-inner-card">
+                            <HBox alignment="CENTER_LEFT">
+                                <Label fx:id="previewNameLabel" styleClass="brand-title" text="Asanni"/>
+                                <Region HBox.hgrow="ALWAYS"/>
+                                <Label styleClass="status-badge-not-live" text="●  Not live"/>
+                            </HBox>
+                            <Label fx:id="previewSubtitleLabel" styleClass="muted-text" text="Mediterranean · Zamzama"/>
+                        </VBox>
+
+                        <!-- Sub-card 2: Customer-facing status -->
+                        <VBox spacing="6.0" styleClass="preview-inner-card">
+                            <Label styleClass="eyebrow-muted" text="CUSTOMER-FACING STATUS"/>
+                            <Label styleClass="muted-text"
+                                   text="Your profile stays visible, but live discovery shows &quot;No tables right now.&quot;"/>
+                        </VBox>
+
+                        <!-- Sub-card 3: Profile fields -->
+                        <VBox spacing="6.0" styleClass="preview-inner-card">
+                            <Label styleClass="eyebrow-muted" text="PROFILE FIELDS"/>
+                            <Label styleClass="muted-text"
+                                   text="Restaurant name, cuisine, location and contact details are used across search and map."/>
+                        </VBox>
+                    </VBox>
+
+                </HBox>
+            </VBox>
+        </HBox>
+    </VBox>
+</ScrollPane>

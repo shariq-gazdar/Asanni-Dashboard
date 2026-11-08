@@ -1,0 +1,293 @@
+/* ===== Root & Layout Surfaces ===== */
+.waiting-root {
+    -fx-background-color: #CBC7BF;
+}
+
+/* ===== Loading Screen ===== */
+.loading-text {
+    -fx-font-size: 18px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #111111;
+}
+
+.top-navbar {
+    -fx-background-color: #FAF9F6;
+    -fx-background-radius: 18px;
+    -fx-border-radius: 18px;
+    -fx-border-color: #E2DFD9;
+    -fx-border-width: 1px;
+    -fx-padding: 12px 20px;
+}
+
+.surface-card {
+    -fx-background-color: #EFECE6;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-border-color: #DFDCD6;
+    -fx-border-width: 1px;
+    -fx-padding: 24px;
+}
+
+/* ===== Typography ===== */
+.eyebrow-red {
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #B3262E;
+    -fx-letter-spacing: 0.5px;
+}
+
+.eyebrow-muted {
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #5A5650;
+    -fx-letter-spacing: 0.4px;
+}
+
+.brand-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111111;
+}
+
+.sidebar-heading {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111111;
+    -fx-wrap-text: true;
+}
+
+.muted-text {
+    -fx-font-size: 13px;
+    -fx-text-fill: #6E6A63;
+    -fx-wrap-text: true;
+}
+
+.muted-text-small {
+    -fx-font-size: 12px;
+    -fx-text-fill: #6E6A63;
+}
+
+/* ===== Top Navbar Badges & Buttons ===== */
+.logo-badge {
+    -fx-background-color: #B3262E;
+    -fx-background-radius: 10px;
+    -fx-min-width: 38px;
+    -fx-min-height: 38px;
+    -fx-alignment: center;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+}
+
+.avatar-circle {
+    -fx-background-color: #B3262E;
+    -fx-background-radius: 50px;
+    -fx-min-width: 38px;
+    -fx-min-height: 38px;
+    -fx-alignment: center;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+}
+
+.pill-button-outline {
+    -fx-background-color: #FAF9F6;
+    -fx-border-color: #DEDAD3;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-padding: 7px 16px;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111111;
+    -fx-cursor: hand;
+}
+
+.pill-button-outline:hover {
+    -fx-background-color: #FFFFFF;
+}
+
+/* ===== Left Sidebar Amber Tip Card ===== */
+.amber-tip-card {
+    -fx-background-color: #F2E2CC;
+    -fx-background-radius: 14px;
+    -fx-border-radius: 14px;
+    -fx-border-color: #E6D2B5;
+    -fx-border-width: 1px;
+    -fx-padding: 16px;
+}
+
+.amber-tip-text {
+    -fx-font-size: 12px;
+    -fx-text-fill: #9A5B13;
+    -fx-wrap-text: true;
+}
+
+/* ===== Large Rose Hero Banner & Center Icon ===== */
+.closed-hero-banner {
+    -fx-background-color: #EDD6D5;
+    -fx-background-radius: 22px;
+    -fx-border-radius: 22px;
+    -fx-border-color: #E3C5C4;
+    -fx-border-width: 1px;
+    -fx-alignment: center;
+}
+
+.closed-hero-circle {
+    -fx-background-color: #8E3032;
+    -fx-background-radius: 50px;
+    -fx-min-width: 78px;
+    -fx-min-height: 78px;
+    -fx-max-width: 78px;
+    -fx-max-height: 78px;
+    -fx-alignment: center;
+}
+
+.open-hero-banner {
+    -fx-background-color: #E7F2E8;
+    -fx-background-radius: 20px;
+}
+
+.open-hero-circle {
+    -fx-background-color: #E7F2E8;
+    -fx-background-radius: 50%;
+    -fx-min-width: 120px;
+    -fx-min-height: 120px;
+    -fx-max-width: 120px;
+    -fx-max-height: 120px;
+}
+
+.open-pill-badge {
+    -fx-background-color: #E7F2E8;
+    -fx-background-radius: 20px;
+    -fx-padding: 8px 16px;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1F7A33;
+    -fx-letter-spacing: 0.5px;
+}
+
+.open-main-heading {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1F7A33;
+}
+
+/* ===== Centered Status Section ===== */
+.closed-pill-badge {
+    -fx-background-color: #EBD5D5;
+    -fx-background-radius: 50px;
+    -fx-padding: 6px 14px;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #9B2C2C;
+    -fx-letter-spacing: 0.4px;
+}
+
+.closed-main-heading {
+    -fx-font-size: 28px;
+    -fx-text-fill: #1A1918;
+}
+
+/* ===== Customer-Facing Status Card ===== */
+.customer-status-card {
+    -fx-background-color: #FAF9F6;
+    -fx-background-radius: 18px;
+    -fx-border-radius: 18px;
+    -fx-border-color: #E2DFD9;
+    -fx-border-width: 1px;
+    -fx-padding: 18px 22px;
+}
+
+.no-tables-badge {
+    -fx-background-color: #EED8D8;
+    -fx-background-radius: 50px;
+    -fx-padding: 5px 14px;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #9B2C2C;
+}
+
+.wait-time-badge {
+    -fx-background-color: #F3E5D0;
+    -fx-background-radius: 50px;
+    -fx-padding: 5px 14px;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #9A5B13;
+}
+
+.icon-button-transparent {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-padding: 2px;
+}
+
+/* ===== Bottom Actions ===== */
+.reopen-button {
+    -fx-background-color: #B3262E;
+    -fx-background-radius: 50px;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 15px 24px;
+    -fx-cursor: hand;
+}
+
+.reopen-button:hover {
+    -fx-background-color: #9A1F26;
+}
+
+.waiting-time-link {
+    -fx-background-color: transparent;
+    -fx-text-fill: #B3262E;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-padding: 4px 12px;
+}
+
+.waiting-time-link:hover {
+    -fx-underline: true;
+}
+
+/* ===== Wait Time Input Card ===== */
+.wait-time-input-card {
+    -fx-background-color: #FAF9F6;
+    -fx-background-radius: 16px;
+    -fx-border-radius: 16px;
+    -fx-border-color: #E2DFD9;
+    -fx-border-width: 1px;
+    -fx-padding: 20px;
+}
+
+.input-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #111111;
+}
+
+.publish-wait-button {
+    -fx-background-color: #B3262E;
+    -fx-background-radius: 12px;
+    -fx-text-fill: white;
+    -fx-font-weight: 600;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+}
+
+.publish-wait-button:hover {
+    -fx-background-color: #9A1F27;
+}
+
+/* ===== Available Badge (Green) ===== */
+.available-badge {
+    -fx-background-color: #E7F2E8;
+    -fx-background-radius: 12px;
+    -fx-padding: 6px 12px;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1F7A33;
+}

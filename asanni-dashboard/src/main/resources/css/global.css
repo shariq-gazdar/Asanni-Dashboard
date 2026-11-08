@@ -1,0 +1,140 @@
+
+/* ===== Global theme variables ===== */
+.root {
+    -fx-font-family: "Inter";
+    -fx-font-size: 14px;
+
+    /* Theme colors */
+   -color-bg: #CBC7BF;
+    -color-surface: #FFFFFFC9;
+    -color-primary: #B3262E;
+    -color-primary-hover: #9A1F26;
+    -color-text: #111111;
+    -color-muted: #000000;
+    -color-border: #CBC7BF;
+    -color-sidebar: #FFB600;
+    -color-danger: #DC3545;
+
+    -fx-background-color: -color-bg;
+}
+
+/* ===== Typography ===== */
+.heading {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-text;
+}
+
+.subtitle {
+    -fx-font-size: 14px;
+    -fx-text-fill: -color-muted;
+}
+
+.field-label {
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-accent;
+}
+
+.error-message {
+    -fx-text-fill: -color-danger;
+    -fx-wrap-text: true;
+}
+
+/* ===== Inputs ===== */
+.text-field,
+.password-field {
+    -fx-background-color: -color-surface;
+    -fx-border-color: -color-border;
+    -fx-border-radius: 7px;
+    -fx-background-radius: 7px;
+    -fx-padding: 11px;
+    -fx-font-size: 14px;
+    -fx-text-fill: -color-text;
+    -fx-prompt-text-fill: #000;
+}
+
+.text-field:focused,
+.password-field:focused {
+    -fx-border-color: -color-primary;
+    -fx-border-width: 1.5px;
+}
+
+/* ===== Buttons ===== */
+.button-primary {
+    -fx-background-color: -color-primary;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 7px;
+    -fx-padding: 13px 18px;
+    -fx-cursor: hand;
+}
+
+.button-primary:hover {
+    -fx-background-color: -color-primary-hover;
+}
+
+.button-primary:pressed {
+    -fx-opacity: 0.85;
+}
+
+.link-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: -color-primary;
+    -fx-font-weight: bold;
+    -fx-padding: 4px;
+    -fx-cursor: hand;
+}
+
+.link-button:hover {
+    -fx-underline: true;
+}
+
+/* ===== Login / signup layouts ===== */
+.auth-page {
+    -fx-background-color: -color-bg;
+}
+
+.auth-panel {
+    -fx-background-color: -color-primary;
+    -fx-padding: 40px;
+}
+
+.auth-content {
+    -fx-background-color: -color-bg;
+    -fx-padding: 40px;
+}
+
+.brand {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.brand-tagline {
+    -fx-font-size: 27px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.brand-description {
+    -fx-text-fill: -color-bg;
+}
+
+.brand-footer {
+    -fx-font-size: 10px;
+    -fx-text-fill: -color-muted;
+}
+
+.google-button
+{
+ -fx-background-color: green;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 7px;
+    -fx-padding: 13px 18px;
+    -fx-cursor: hand;
+}
+.google-button:hover
+{
+ -fx-background-color: darkgreen;
+}

@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+
+<StackPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.asanni.dashboard.controllers.EditDetailsController"
+           stylesheets="@../css/global.css, @../css/EditDetails.css">
+
+    <!-- Main Scrollable Content -->
+    <ScrollPane fitToWidth="true" fitToHeight="true" hbarPolicy="NEVER" styleClass="page-scroll">
+        <content>
+            <VBox spacing="18.0" styleClass="page-root">
+                <padding>
+                    <Insets top="20.0" right="24.0" bottom="24.0" left="24.0"/>
+                </padding>
+
+                <!-- ==================== TOP NAVBAR ==================== -->
+                <HBox alignment="CENTER_LEFT" spacing="14.0" styleClass="top-navbar">
+                    <padding>
+                        <Insets top="12.0" right="18.0" bottom="12.0" left="18.0"/>
+                    </padding>
+
+                    <HBox alignment="CENTER_LEFT" spacing="12.0" onMouseClicked="#handleNavDashboard" style="-fx-cursor: hand;">
+                        <Label fx:id="logoBadge" alignment="CENTER" prefHeight="38.0" prefWidth="38.0" styleClass="brand-badge" text="RS"/>
+                        <VBox alignment="CENTER_LEFT" spacing="1.0">
+                            <Label styleClass="portal-kicker" text="PARTNER PORTAL"/>
+                            <Label fx:id="navBrandLabel" styleClass="portal-brand" text="Restaurant"/>
+                        </VBox>
+                    </HBox>
+
+                    <Region HBox.hgrow="ALWAYS"/>
+
+                    <Button onAction="#handleHelp" styleClass="help-btn" text="Help">
+                        <graphic>
+                            <StackPane prefHeight="16.0" prefWidth="16.0" styleClass="help-icon-circle">
+                                <Label styleClass="help-icon-question" text="?"/>
+                            </StackPane>
+                        </graphic>
+                    </Button>
+
+                    <Label fx:id="avatarLabel" alignment="CENTER" prefHeight="38.0" prefWidth="38.0" styleClass="avatar-badge" text="RS"/>
+                </HBox>
+
+                <!-- ==================== MAIN 2-COLUMN BODY ==================== -->
+                <HBox spacing="18.0" VBox.vgrow="ALWAYS">
+
+                    <!-- ==================== LEFT SIDEBAR ==================== -->
+                    <VBox prefWidth="248.0" minWidth="235.0" maxWidth="260.0" spacing="14.0" styleClass="sidebar-card">
+                        <padding>
+                            <Insets top="22.0" right="16.0" bottom="18.0" left="16.0"/>
+                        </padding>
+
+                        <VBox spacing="5.0">
+                            <Label styleClass="section-kicker" text="NAVIGATION"/>
+                            <Label styleClass="sidebar-title" text="Quick access"/>
+                            <Label styleClass="sidebar-subtitle" text="Manage your restaurant, live controls and customer profile." wrapText="true"/>
+                        </VBox>
+
+                        <!-- Navigation Items -->
+                        <VBox spacing="10.0">
+                            <VBox.margin>
+                                <Insets top="4.0"/>
+                            </VBox.margin>
+
+                            <!-- 1. Dashboard -->
+                            <HBox alignment="CENTER_LEFT" spacing="12.0" onMouseClicked="#handleNavDashboard" styleClass="nav-item-card">
+                                <padding>
+                                    <Insets top="12.0" right="14.0" bottom="12.0" left="14.0"/>
+                                </padding>
+                                <SVGPath content="M3 3h7v7H3V3zm11 0h7v7h-7V3zM3 14h7v7H3v-7zm11 0h7v7h-7v-7z"
+                                         scaleX="0.72" scaleY="0.72" styleClass="nav-item-icon"/>
+                                <VBox spacing="1.0">
+                                    <Label styleClass="nav-item-title" text="Dashboard"/>
+                                    <Label styleClass="nav-item-sub" text="Overview and activity"/>
+                                </VBox>
+                            </HBox>
+
+                            <!-- 2. Tables -->
+                            <HBox alignment="CENTER_LEFT" spacing="12.0" onMouseClicked="#handleNavTables" styleClass="nav-item-card">
+                                <padding>
+                                    <Insets top="12.0" right="14.0" bottom="12.0" left="14.0"/>
+                                </padding>
+                                <SVGPath content="M4 10h16v4H4v-4zm2 4v5m12-5v5M7 6h10v4H7V6z"
+                                         scaleX="0.75" scaleY="0.75" styleClass="nav-item-icon"/>
+                                <VBox spacing="1.0">
+                                    <Label styleClass="nav-item-title" text="Tables"/>
+                                    <Label styleClass="nav-item-sub" text="Live seating controls"/>
+                                </VBox>
+                            </HBox>
+
+                            <!-- 3. Preview -->
+                            <HBox alignment="CENTER_LEFT" spacing="12.0" onMouseClicked="#handleNavPreview" styleClass="nav-item-card">
+                                <padding>
+                                    <Insets top="12.0" right="14.0" bottom="12.0" left="14.0"/>
+                                </padding>
+                                <SVGPath content="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"
+                                         scaleX="0.72" scaleY="0.72" styleClass="nav-item-icon"/>
+                                <VBox spacing="1.0">
+                                    <Label styleClass="nav-item-title" text="Preview"/>
+                                    <Label styleClass="nav-item-sub" text="Customer-facing view"/>
+                                </VBox>
+                            </HBox>
+
+                            <!-- 4. Restaurant Profile (Active) -->
+                            <HBox alignment="CENTER_LEFT" spacing="12.0" styleClass="nav-item-card, nav-item-active">
+                                <padding>
+                                    <Insets top="12.0" right="14.0" bottom="12.0" left="14.0"/>
+                                </padding>
+                                <SVGPath content="M3 9l9-6 9 6v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9zm6 12v-7h6v7"
+                                         scaleX="0.72" scaleY="0.72" styleClass="nav-item-icon-active"/>
+                                <VBox spacing="1.0">
+                                    <Label styleClass="nav-item-title-active" text="Restaurant profile"/>
+                                    <Label styleClass="nav-item-sub-active" text="Identity, location and media"/>
+                                </VBox>
+                            </HBox>
+
+                            <!-- 5. Settings / Waiting Control -->
+                            <HBox alignment="CENTER_LEFT" spacing="12.0" onMouseClicked="#handleNavSettings" styleClass="nav-item-card">
+                                <padding>
+                                    <Insets top="12.0" right="14.0" bottom="12.0" left="14.0"/>
+                                </padding>
+                                <SVGPath content="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm7.4-2.5a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.6 1.6 0 0 0-1-1.5 1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.6 1.6 0 0 0 1.5-1 1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3h.1a1.6 1.6 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8v.1a1.6 1.6 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1z"
+                                         scaleX="0.68" scaleY="0.68" styleClass="nav-item-icon"/>
+                                <VBox spacing="1.0">
+                                    <Label styleClass="nav-item-title" text="Settings"/>
+                                    <Label styleClass="nav-item-sub" text="Account and billing"/>
+                                </VBox>
+                            </HBox>
+                        </VBox>
+
+                        <Region VBox.vgrow="ALWAYS"/>
+
+                        <!-- Bottom Restaurant Summary Card -->
+                        <VBox spacing="5.0" styleClass="sidebar-bottom-card">
+                            <padding>
+                                <Insets top="14.0" right="14.0" bottom="14.0" left="14.0"/>
+                            </padding>
+                            <Label styleClass="section-kicker" text="YOUR RESTAURANT"/>
+                            <Label fx:id="sidebarRestaurantLabel" styleClass="sidebar-restaurant-name" text="Loading..."/>
+                            <Label styleClass="sidebar-subtitle" text="Keep your profile up to date so guests know what to expect." wrapText="true"/>
+                        </VBox>
+                    </VBox>
+
+                    <!-- ==================== RIGHT MAIN CONTENT ==================== -->
+                    <VBox spacing="16.0" HBox.hgrow="ALWAYS">
+
+                        <!-- 1. Hero Header Card -->
+                        <VBox spacing="6.0" styleClass="hero-header-card">
+                            <padding>
+                                <Insets top="22.0" right="26.0" bottom="22.0" left="26.0"/>
+                            </padding>
+                            <Label styleClass="section-kicker" text="RESTAURANT PROFILE"/>
+                            <Label styleClass="hero-main-title" text="Edit your restaurant profile."/>
+                            <Label styleClass="hero-subtitle" text="Update the details and photos guests see in search, maps and your listing."/>
+                        </VBox>
+
+                        <!-- 2. Two-Column Details + Media Section -->
+                        <HBox spacing="16.0" VBox.vgrow="ALWAYS">
+
+                            <!-- LEFT CARD: Restaurant Details Form -->
+                            <VBox spacing="16.0" styleClass="surface-card" HBox.hgrow="ALWAYS">
+                                <padding>
+                                    <Insets top="22.0" right="24.0" bottom="22.0" left="24.0"/>
+                                </padding>
+
+                                <!-- Card Header -->
+                                <HBox alignment="TOP_LEFT">
+                                    <VBox spacing="3.0" HBox.hgrow="ALWAYS">
+                                        <Label styleClass="card-title" text="Restaurant details"/>
+                                        <Label styleClass="card-subtitle" text="Make it easy for guests to find and get to know you."/>
+                                    </VBox>
+                                    <SVGPath content="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"
+                                             scaleX="0.72" scaleY="0.72" styleClass="muted-svg-icon"/>
+                                </HBox>
+
+                                <!-- Field 1: Restaurant Name -->
+                                <VBox spacing="6.0">
+                                    <Label styleClass="field-label" text="Restaurant name"/>
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="input-shell">
+                                        <padding>
+                                            <Insets top="4.0" right="14.0" bottom="4.0" left="14.0"/>
+                                        </padding>
+                                        <SVGPath content="M3 9l9-6 9 6v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9zm6 12v-7h6v7"
+                                                 scaleX="0.68" scaleY="0.68" styleClass="muted-svg-icon"/>
+                                        <TextField fx:id="nameField" promptText="Enter restaurant name" styleClass="borderless-input" HBox.hgrow="ALWAYS"/>
+                                    </HBox>
+                                </VBox>
+
+                                <!-- Field 2: Address -->
+                                <VBox spacing="6.0">
+                                    <Label styleClass="field-label" text="Address"/>
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="input-shell">
+                                        <padding>
+                                            <Insets top="4.0" right="14.0" bottom="4.0" left="14.0"/>
+                                        </padding>
+                                        <SVGPath content="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+                                                 scaleX="0.68" scaleY="0.68" styleClass="muted-svg-icon"/>
+                                        <TextField fx:id="addressField" promptText="Street address, area, city" styleClass="borderless-input" HBox.hgrow="ALWAYS"/>
+                                    </HBox>
+                                </VBox>
+
+                                <!-- Field 3: Cuisine (TextField instead of Dropdown) -->
+                                <VBox spacing="6.0">
+                                    <Label styleClass="field-label" text="Cuisine"/>
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0" styleClass="input-shell">
+                                        <padding>
+                                            <Insets top="4.0" right="14.0" bottom="4.0" left="14.0"/>
+                                        </padding>
+                                        <SVGPath content="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"
+                                                 scaleX="0.68" scaleY="0.68" styleClass="muted-svg-icon"/>
+                                        <TextField fx:id="cuisineField" promptText="e.g. French, Cafe" styleClass="borderless-input" HBox.hgrow="ALWAYS"/>
+                                    </HBox>
+                                </VBox>
+
+                                <!-- Field 4: Description -->
+                                <VBox spacing="6.0" VBox.vgrow="ALWAYS">
+                                    <Label styleClass="field-label" text="Description"/>
+                                    <StackPane styleClass="textarea-shell" VBox.vgrow="ALWAYS">
+                                        <TextArea fx:id="descriptionArea" prefRowCount="4" wrapText="true"
+                                                  promptText="Describe your restaurant..."
+                                                  styleClass="borderless-textarea"/>
+                                        <Label fx:id="charCountLabel" styleClass="char-counter" text="0 / 300" StackPane.alignment="BOTTOM_RIGHT">
+                                            <StackPane.margin>
+                                                <Insets right="14.0" bottom="10.0"/>
+                                            </StackPane.margin>
+                                        </Label>
+                                    </StackPane>
+                                    <Label styleClass="helper-footnote" text="Share your food, atmosphere and what makes your restaurant special."/>
+                                </VBox>
+
+                                <!-- Bottom Info Note -->
+                                <HBox alignment="CENTER_LEFT" spacing="8.0">
+                                    <SVGPath content="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 15v-5m0-4h.01"
+                                             scaleX="0.7" scaleY="0.7" styleClass="muted-svg-icon"/>
+                                    <Label styleClass="helper-footnote" text="These details are visible on your customer-facing profile."/>
+                                </HBox>
+                            </VBox>
+
+                            <!-- RIGHT COLUMN: Cover Photo & Restaurant Logo -->
+                            <VBox prefWidth="360.0" minWidth="340.0" maxWidth="380.0" spacing="16.0">
+
+                                <!-- Top Right Card: Cover Photo -->
+                                <VBox spacing="12.0" styleClass="surface-card">
+                                    <padding>
+                                        <Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
+                                    </padding>
+
+                                    <VBox spacing="3.0">
+                                        <Label styleClass="card-title" text="Cover photo"/>
+                                        <Label styleClass="card-subtitle" text="Give guests a first look at your restaurant."/>
+                                    </VBox>
+
+                                    <!-- Cover Image Live Preview -->
+                                    <StackPane fx:id="coverPreviewContainer" prefHeight="155.0" minHeight="155.0" maxHeight="155.0" styleClass="cover-preview-box">
+                                        <Label fx:id="coverPlaceholderLabel" styleClass="cover-placeholder-text" text="No cover photo" visible="false"/>
+                                        <ImageView fx:id="coverImageView" fitHeight="155.0" pickOnBounds="true" preserveRatio="false">
+                                            <image>
+                                                <Image url="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&amp;fit=crop&amp;w=900&amp;q=80" backgroundLoading="true"/>
+                                            </image>
+                                        </ImageView>
+
+                                        <HBox fx:id="currentCoverBadge" alignment="CENTER_LEFT" spacing="5.0" maxWidth="-Infinity" maxHeight="-Infinity"
+                                              styleClass="current-cover-pill" StackPane.alignment="TOP_LEFT">
+                                            <StackPane.margin>
+                                                <Insets top="10.0" left="10.0"/>
+                                            </StackPane.margin>
+                                            <Label styleClass="cover-pill-check" text="✓"/>
+                                            <Label fx:id="coverBadgeText" styleClass="cover-pill-text" text="Current cover"/>
+                                        </HBox>
+                                    </StackPane>
+
+                                    <!-- Direct Cover URL Text Field -->
+                                    <VBox spacing="5.0">
+                                        <Label styleClass="field-label" text="Cover photo URL"/>
+                                        <HBox alignment="CENTER_LEFT" spacing="8.0" styleClass="input-shell">
+                                            <padding>
+                                                <Insets top="3.0" right="12.0" bottom="3.0" left="12.0"/>
+                                            </padding>
+                                            <SVGPath content="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
+                                                     scaleX="0.62" scaleY="0.62" styleClass="muted-svg-icon"/>
+                                            <TextField fx:id="coverUrlField" promptText="Paste cover image URL (https://...)" styleClass="borderless-input" HBox.hgrow="ALWAYS"/>
+                                        </HBox>
+                                    </VBox>
+
+                                    <!-- Change / Remove Actions -->
+                                    <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                        <Button onAction="#handleChangeCover" styleClass="secondary-pill-btn" text="Preview photo">
+                                            <graphic>
+                                                <SVGPath content="M21 19V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"
+                                                         scaleX="0.68" scaleY="0.68" styleClass="btn-dark-icon"/>
+                                            </graphic>
+                                        </Button>
+
+                                        <Region HBox.hgrow="ALWAYS"/>
+
+                                        <Button onAction="#handleRemoveCover" styleClass="remove-link-btn" text="Remove">
+                                            <graphic>
+                                                <SVGPath content="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6h14z"
+                                                         scaleX="0.65" scaleY="0.65" styleClass="muted-svg-icon"/>
+                                            </graphic>
+                                        </Button>
+                                    </HBox>
+
+                                    <Label styleClass="helper-footnote" text="Paste any direct JPG or PNG link · 1600 × 900 px recommended"/>
+                                </VBox>
+
+                                <!-- Bottom Right Card: Restaurant Logo -->
+                                <VBox spacing="12.0" styleClass="surface-card" VBox.vgrow="ALWAYS">
+                                    <padding>
+                                        <Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
+                                    </padding>
+
+                                    <Label styleClass="card-title" text="Restaurant logo"/>
+
+                                    <HBox alignment="CENTER_LEFT" spacing="14.0">
+                                        <!-- Square Dark Logo Box with Live Image Preview -->
+                                        <StackPane fx:id="logoBoxContainer" prefHeight="64.0" prefWidth="64.0" minHeight="64.0" minWidth="64.0" maxHeight="64.0" maxWidth="64.0" styleClass="logo-preview-square">
+                                            <Label fx:id="logoPreviewInitials" styleClass="logo-initials-text" text="RS"/>
+                                            <ImageView fx:id="logoImageView" fitHeight="64.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="false" visible="false"/>
+                                        </StackPane>
+
+                                        <VBox spacing="4.0" HBox.hgrow="ALWAYS">
+                                            <Label fx:id="logoFileNameLabel" styleClass="logo-filename-label" text="restaurant-logo.png"/>
+                                            <Label styleClass="helper-footnote" text="Square JPG or PNG URL"/>
+                                            <HBox spacing="8.0" alignment="CENTER_LEFT">
+                                                <Button onAction="#handleChangeLogo" styleClass="secondary-pill-btn" text="Preview logo">
+                                                    <graphic>
+                                                        <SVGPath content="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"
+                                                                 scaleX="0.65" scaleY="0.65" styleClass="btn-dark-icon"/>
+                                                    </graphic>
+                                                </Button>
+                                                <Button onAction="#handleRemoveLogo" styleClass="remove-link-btn" text="Clear"/>
+                                            </HBox>
+                                        </VBox>
+                                    </HBox>
+
+                                    <!-- Direct Logo URL Text Field -->
+                                    <VBox spacing="5.0">
+                                        <Label styleClass="field-label" text="Logo image URL"/>
+                                        <HBox alignment="CENTER_LEFT" spacing="8.0" styleClass="input-shell">
+                                            <padding>
+                                                <Insets top="3.0" right="12.0" bottom="3.0" left="12.0"/>
+                                            </padding>
+                                            <SVGPath content="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
+                                                     scaleX="0.62" scaleY="0.62" styleClass="muted-svg-icon"/>
+                                            <TextField fx:id="logoUrlField" promptText="Paste logo image URL (https://...)" styleClass="borderless-input" HBox.hgrow="ALWAYS"/>
+                                        </HBox>
+                                    </VBox>
+
+                                    <Label styleClass="helper-footnote" text="Use a clear logo that guests can recognize, even at a small size." wrapText="true"/>
+                                </VBox>
+                            </VBox>
+                        </HBox>
+
+                        <!-- 3. Bottom Save Action Bar -->
+                        <HBox alignment="CENTER_LEFT" spacing="16.0" styleClass="bottom-save-bar">
+                            <padding>
+                                <Insets top="16.0" right="22.0" bottom="16.0" left="22.0"/>
+                            </padding>
+
+                            <VBox spacing="2.0">
+                                <Label styleClass="save-bar-title" text="Ready to update your profile?"/>
+                                <Label fx:id="saveStatusSubLabel" styleClass="save-bar-sub" text="Your changes will appear after you save."/>
+                            </VBox>
+
+                            <Region HBox.hgrow="ALWAYS"/>
+
+                            <Button onAction="#handleCancel" styleClass="cancel-pill-btn" text="Cancel"/>
+                            <Button fx:id="saveBtn" onAction="#handleSaveChanges" styleClass="primary-save-btn" text="✓  Save changes"/>
+                        </HBox>
+
+                    </VBox>
+                </HBox>
+            </VBox>
+        </content>
+    </ScrollPane>
+
+    <!-- ==================== FULL-SCREEN GIF LOADING OVERLAY ==================== -->
+    <StackPane fx:id="loadingOverlay" style="-fx-background-color: #CBC7BF;" visible="true"/>
+
+</StackPane>

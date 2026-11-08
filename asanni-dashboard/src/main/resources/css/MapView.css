@@ -1,0 +1,468 @@
+/* ===== MapView.css — self-contained: defines every color lookup it uses ===== */
+
+/* Fallback declarations so children (Labels, Buttons, etc.) can resolve
+   these lookups during FXML load — before `.root` becomes available. */
+* {
+    -color-bg:             #CBC7BF;
+    -color-surface:        #FFFFFFC9;
+    -color-primary:        #B3262E;
+    -color-primary-hover:  #9A1F26;
+}
+
+.map-page {
+    -color-bg:             #CBC7BF;
+    -color-surface:        #FFFFFFC9;
+    -color-primary:        #B3262E;
+    -color-primary-hover:  #9A1F26;
+
+    -color-ink:            #111111;
+    -color-card:           #FFFFFF;
+    -color-soft:           #F4F2EE;
+    -color-line:           #E3DFD8;
+    -color-ok:             #1E8E4E;
+    -color-ok-bg:          #DDF3E5;
+    -color-warn:           #B7791F;
+    -color-warn-bg:        #FFF0CC;
+    -color-full:           #B3262E;
+    -color-full-bg:        #FBE0E1;
+    -color-closed:         #6B6B6B;
+    -color-closed-bg:      #E8E6E1;
+
+    -fx-background-color: -color-bg;
+}
+
+/* ========== App bar ========== */
+.app-bar {
+    -fx-background-color: -color-card;
+    -fx-background-radius: 14px;
+    -fx-border-color: -color-line;
+    -fx-border-radius: 14px;
+    -fx-padding: 10px 14px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.06), 10, 0, 0, 2);
+}
+
+.brand-badge {
+    -fx-background-color: -color-primary;
+    -fx-background-radius: 9px;
+    -fx-min-width: 36px;
+    -fx-min-height: 36px;
+    -fx-pref-width: 36px;
+    -fx-pref-height: 36px;
+}
+
+.brand-badge-text {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+
+.eyebrow {
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #6B6B6B;
+}
+
+.eyebrow-red {
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-primary;
+}
+
+.app-bar-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-ink;
+}
+
+.link-button-muted {
+    -fx-background-color: transparent;
+    -fx-text-fill: #555555;
+    -fx-font-size: 12px;
+    -fx-cursor: hand;
+}
+
+.link-button-muted:hover {
+    -fx-text-fill: -color-primary;
+}
+
+.button-outline {
+    -fx-background-color: -color-card;
+    -fx-border-color: -color-line;
+    -fx-border-radius: 18px;
+    -fx-background-radius: 18px;
+    -fx-text-fill: -color-ink;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 6px 14px;
+    -fx-cursor: hand;
+}
+
+.button-outline:hover {
+    -fx-border-color: -color-primary;
+    -fx-text-fill: -color-primary;
+}
+
+.button-primary {
+    -fx-background-color: -color-primary;
+    -fx-background-radius: 10px;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 16px;
+    -fx-cursor: hand;
+}
+
+.button-primary:hover {
+    -fx-background-color: -color-primary-hover;
+}
+
+.button-primary:disabled {
+    -fx-opacity: 0.55;
+    -fx-cursor: default;
+}
+
+.avatar {
+    -fx-background-color: -color-primary;
+    -fx-background-radius: 999px;
+    -fx-min-width: 32px;
+    -fx-min-height: 32px;
+    -fx-pref-width: 32px;
+    -fx-pref-height: 32px;
+}
+
+.avatar-text {
+    -fx-text-fill: white;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+/* ========== Hero ========== */
+.hero-card {
+    -fx-background-color: -color-surface;
+    -fx-background-radius: 14px;
+    -fx-border-color: -color-line;
+    -fx-border-radius: 14px;
+    -fx-padding: 16px 20px;
+}
+
+.hero-title {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-ink;
+}
+
+.subtitle {
+    -fx-font-size: 12px;
+    -fx-text-fill: #555555;
+}
+
+.status-pill {
+    -fx-background-color: -color-card;
+    -fx-border-color: -color-line;
+    -fx-border-radius: 14px;
+    -fx-background-radius: 14px;
+    -fx-padding: 5px 12px;
+    -fx-font-size: 11px;
+    -fx-text-fill: #444444;
+}
+
+.status-pill.live {
+    -fx-text-fill: -color-ok;
+    -fx-border-color: -color-ok;
+}
+
+.status-pill.error {
+    -fx-text-fill: -color-full;
+    -fx-border-color: -color-full;
+}
+
+/* ========== Side panel ========== */
+.side-panel {
+    -fx-background-color: -color-surface;
+    -fx-background-radius: 16px;
+    -fx-border-color: -color-line;
+    -fx-border-radius: 16px;
+    -fx-padding: 16px;
+}
+
+.section-title {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-ink;
+}
+
+.section-subtitle {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-ink;
+}
+
+.muted-small {
+    -fx-font-size: 11px;
+    -fx-text-fill: #555555;
+}
+
+.detail-strong {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-ink;
+}
+
+.location-dot {
+    -fx-text-fill: -color-primary;
+    -fx-font-size: 10px;
+    -fx-padding: 3px 0 0 0;
+}
+
+.edge-scroll,
+.edge-scroll > .viewport {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+    -fx-padding: 0;
+}
+
+.edge-scroll .scroll-bar:vertical {
+    -fx-pref-width: 6px;
+    -fx-background-color: transparent;
+}
+
+.edge-scroll .scroll-bar .thumb {
+    -fx-background-color: #C9C4BA;
+    -fx-background-radius: 3px;
+}
+
+.edge-scroll .scroll-bar .increment-button,
+.edge-scroll .scroll-bar .decrement-button {
+    -fx-padding: 0;
+    -fx-pref-height: 0;
+}
+
+/* ========== Restaurant cards ========== */
+.place-card {
+    -fx-background-color: -color-card;
+    -fx-background-radius: 12px;
+    -fx-border-color: -color-line;
+    -fx-border-radius: 12px;
+    -fx-padding: 12px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-cursor: hand;
+}
+
+.place-card:hover {
+    -fx-border-color: #B9B3A8;
+}
+
+.place-card-selected {
+    -fx-border-color: -color-primary;
+    -fx-border-width: 1.5px;
+    -fx-effect: dropshadow(gaussian, rgba(179,38,46,0.18), 10, 0, 0, 2);
+}
+
+.place-logo {
+    -fx-background-color: -color-ink;
+    -fx-background-radius: 10px;
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+    -fx-min-width: 44px;
+    -fx-min-height: 44px;
+    -fx-pref-width: 44px;
+    -fx-pref-height: 44px;
+}
+
+.place-name {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-ink;
+}
+
+.place-sub {
+    -fx-font-size: 11px;
+    -fx-text-fill: #444444;
+}
+
+.place-meta {
+    -fx-font-size: 10px;
+    -fx-text-fill: #777777;
+}
+
+.place-meta.stale {
+    -fx-text-fill: -color-warn;
+}
+
+/* ========== Chips ========== */
+.chip {
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-padding: 3px 9px;
+    -fx-background-radius: 10px;
+}
+
+.chip-free    { -fx-background-color: -color-ok-bg;     -fx-text-fill: -color-ok; }
+.chip-filling { -fx-background-color: -color-warn-bg;   -fx-text-fill: -color-warn; }
+.chip-full    { -fx-background-color: -color-full-bg;   -fx-text-fill: -color-full; }
+.chip-closed  { -fx-background-color: -color-closed-bg; -fx-text-fill: -color-closed; }
+
+/* ========== Map panel ========== */
+.map-panel {
+    -fx-background-color: -color-card;
+    -fx-background-radius: 16px;
+    -fx-border-color: -color-line;
+    -fx-border-radius: 16px;
+}
+
+.search-box {
+    -fx-background-color: -color-card;
+    -fx-background-radius: 22px;
+    -fx-border-color: -color-line;
+    -fx-border-radius: 22px;
+    -fx-padding: 2px 8px 2px 12px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 8, 0, 0, 2);
+}
+
+.search-icon {
+    -fx-font-size: 16px;
+    -fx-text-fill: #555555;
+}
+
+.search-field,
+.search-field:focused {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 8px;
+    -fx-font-size: 13px;
+}
+
+.icon-flat {
+    -fx-background-color: transparent;
+    -fx-text-fill: #777777;
+    -fx-cursor: hand;
+    -fx-padding: 2px 6px;
+}
+
+.icon-flat:hover {
+    -fx-text-fill: -color-primary;
+}
+
+.filters-button {
+    -fx-background-color: -color-card;
+    -fx-background-radius: 22px;
+    -fx-border-color: -color-line;
+    -fx-border-radius: 22px;
+    -fx-text-fill: -color-ink;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 4px 8px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 8, 0, 0, 2);
+}
+
+.filters-button:hover {
+    -fx-border-color: -color-primary;
+}
+
+.segmented {
+    -fx-background-color: -color-card;
+    -fx-background-radius: 8px;
+    -fx-border-color: -color-line;
+    -fx-border-radius: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.12), 8, 0, 0, 2);
+}
+
+.segment {
+    -fx-background-color: transparent;
+    -fx-text-fill: -color-ink;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-padding: 6px 14px;
+    -fx-cursor: hand;
+    -fx-background-radius: 8px;
+}
+
+.segment:selected {
+    -fx-background-color: -color-primary;
+    -fx-text-fill: white;
+}
+
+.map-controls {
+    -fx-background-color: -color-card;
+    -fx-background-radius: 8px;
+    -fx-border-color: -color-line;
+    -fx-border-radius: 8px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.14), 8, 0, 0, 2);
+}
+
+.map-controls .separator .line {
+    -fx-border-color: -color-line;
+    -fx-border-width: 1 0 0 0;
+}
+
+.map-control-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: -color-ink;
+    -fx-font-size: 16px;
+    -fx-min-width: 34px;
+    -fx-min-height: 34px;
+    -fx-cursor: hand;
+}
+
+.map-control-button:hover {
+    -fx-text-fill: -color-primary;
+}
+
+/* ========== Banner ========== */
+.banner {
+    -fx-background-color: -color-card;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-padding: 10px 14px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.14), 8, 0, 0, 2);
+}
+
+.banner-warn { -fx-border-color: -color-full; }
+.banner-ok   { -fx-border-color: -color-ok; }
+
+.banner-icon {
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+    -fx-min-width: 20px;
+    -fx-min-height: 20px;
+    -fx-background-radius: 999px;
+    -fx-text-fill: white;
+}
+
+.banner-warn .banner-icon { -fx-background-color: -color-full; }
+.banner-ok .banner-icon   { -fx-background-color: -color-ok; }
+
+.banner-title {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-ink;
+}
+
+.banner-text {
+    -fx-font-size: 11px;
+    -fx-text-fill: #555555;
+}
+
+/* ========== Menus ========== */
+.context-menu {
+    -fx-background-color: -color-card;
+    -fx-background-radius: 8px;
+    -fx-border-color: -color-line;
+    -fx-border-radius: 8px;
+}
+
+.menu-item:focused {
+    -fx-background-color: -color-soft;
+}
+
+.menu-item:focused .label {
+    -fx-text-fill: -color-ink;
+}
+
+.separator .line {
+    -fx-border-color: -color-line;
+    -fx-border-width: 1 0 0 0;
+}

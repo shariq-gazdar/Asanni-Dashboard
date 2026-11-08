@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.web.WebView?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.asanni.dashboard.controllers.MapViewController"
+            styleClass="map-page" prefWidth="1100" prefHeight="760">
+
+    <stylesheets>
+        <URL value="@../css/global.css"/>
+        <URL value="@../css/MapView.css"/>
+    </stylesheets>
+
+    <!-- ================= App bar ================= -->
+    <top>
+        <VBox spacing="14" styleClass="page-top">
+            <padding>
+                <Insets top="14" right="18" bottom="0" left="18"/>
+            </padding>
+
+            <HBox alignment="CENTER_LEFT" spacing="12" styleClass="app-bar">
+                <StackPane styleClass="brand-badge">
+                    <Label text="AS" styleClass="brand-badge-text"/>
+                </StackPane>
+                <VBox spacing="0">
+                    <Label text="ASANNI" styleClass="eyebrow"/>
+                    <Label fx:id="cityTitleLabel" text="Explore Karachi" styleClass="app-bar-title"/>
+                </VBox>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Button fx:id="backButton" text="‹  Back to explore" styleClass="link-button-muted"
+                        onAction="#onBackClicked"/>
+                <Button fx:id="helpButton" text="?  Help" styleClass="button-outline"
+                        onAction="#onHelpClicked"/>
+                <StackPane styleClass="avatar">
+                    <Label fx:id="avatarLabel" text="OA" styleClass="avatar-text"/>
+                </StackPane>
+            </HBox>
+
+            <!-- ================= Hero ================= -->
+            <HBox alignment="CENTER_LEFT" styleClass="hero-card">
+                <VBox spacing="4" HBox.hgrow="ALWAYS">
+                    <Label fx:id="discoverLabel" text="DISCOVER · KARACHI" styleClass="eyebrow-red"/>
+                    <Label text="A good table. The right location." styleClass="hero-title"/>
+                    <Label text="Find your restaurant on the map and check live table availability before you go."
+                           styleClass="subtitle"/>
+                </VBox>
+                <Label fx:id="dataStatusLabel" text="Connecting…" styleClass="status-pill"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <!-- ================= Body ================= -->
+    <center>
+        <HBox spacing="16" styleClass="body-row">
+            <padding>
+                <Insets top="14" right="18" bottom="18" left="18"/>
+            </padding>
+
+            <!-- ========== Left panel ========== -->
+            <VBox spacing="12" styleClass="side-panel" minWidth="330" prefWidth="340" maxWidth="360">
+
+                <Label text="NEAR YOU" styleClass="eyebrow-red"/>
+                <HBox alignment="CENTER_LEFT">
+                    <Label text="Nearest live tables" styleClass="section-title"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <Label fx:id="countLabel" text="0 places" styleClass="muted-small"/>
+                </HBox>
+
+                <ScrollPane fitToWidth="true" hbarPolicy="NEVER" styleClass="edge-scroll"
+                            VBox.vgrow="ALWAYS" minHeight="140">
+                    <VBox fx:id="placesBox" spacing="10"/>
+                </ScrollPane>
+
+                <Label fx:id="emptyLabel" text="No restaurants match your search." styleClass="muted-small"
+                       wrapText="true" visible="false" managed="false"/>
+
+                <Separator/>
+
+                <Label text="Restaurant location" styleClass="section-subtitle"/>
+                <HBox spacing="8" alignment="TOP_LEFT">
+                    <Label text="●" styleClass="location-dot"/>
+                    <VBox spacing="2" HBox.hgrow="ALWAYS">
+                        <Label fx:id="detailCityLabel" text="Karachi, Pakistan" styleClass="detail-strong"/>
+                        <Label fx:id="detailAddressLabel" text="Select a restaurant to see its address."
+                               styleClass="muted-small" wrapText="true"/>
+                        <Label fx:id="detailPhoneLabel" text="" styleClass="muted-small"
+                               visible="false" managed="false"/>
+                    </VBox>
+                </HBox>
+
+                <Button fx:id="showOnMapButton" text="Show restaurant on map" styleClass="button-primary"
+                        maxWidth="Infinity" onAction="#onShowOnMap"/>
+
+                <Separator/>
+
+                <VBox spacing="6">
+                    <Label text="LIVE TABLE STATUS" styleClass="eyebrow"/>
+                    <HBox spacing="6">
+                        <Label text="● Free now" styleClass="chip chip-free"/>
+                        <Label text="● Filling fast" styleClass="chip chip-filling"/>
+                        <Label text="● Full" styleClass="chip chip-full"/>
+                    </HBox>
+                </VBox>
+            </VBox>
+
+            <!-- ========== Map panel ========== -->
+            <StackPane fx:id="mapPanel" styleClass="map-panel" HBox.hgrow="ALWAYS">
+
+                <WebView fx:id="mapView"/>
+
+                <!-- Search + filters -->
+                <!-- <HBox spacing="8" alignment="CENTER_LEFT" StackPane.alignment="TOP_LEFT"
+                <!--       maxWidth="-Infinity" maxHeight="-Infinity" pickOnBounds="false">
+                <!--     <StackPane.margin>
+                <!--         <Insets top="14" left="14"/>
+                <!--     </StackPane.margin>
+                <!--     <HBox alignment="CENTER_LEFT" styleClass="search-box" prefWidth="360">
+                <!--         <Label text="⌕" styleClass="search-icon"/>
+                <!--         <TextField fx:id="searchField" promptText="Search restaurants or cuisine"
+                <!--                    styleClass="search-field" HBox.hgrow="ALWAYS"/>
+                <!--         <Button fx:id="clearSearchButton" text="✕" styleClass="icon-flat"
+                <!--                 onAction="#onClearSearch" visible="false" managed="false"/>
+                <!--     </HBox>
+                <!--     <MenuButton fx:id="filtersButton" text="Filters" styleClass="filters-button">
+                <!--         <items>
+                <!--             <CheckMenuItem fx:id="openNowItem" text="Open now" onAction="#onFilterChanged"/>
+                <!--             <CheckMenuItem fx:id="freeTablesItem" text="Has free tables" onAction="#onFilterChanged"/>
+                <!--         </items>
+                <!--     </MenuButton>
+                <!-- </HBox>
+
+                <!-- Map / Satellite toggle -->
+                <HBox styleClass="segmented" StackPane.alignment="TOP_RIGHT"
+                      maxWidth="-Infinity" maxHeight="-Infinity">
+                    <StackPane.margin>
+                        <Insets top="14" right="14"/>
+                    </StackPane.margin>
+                    <fx:define>
+                        <ToggleGroup fx:id="mapModeGroup"/>
+                    </fx:define>
+                    <ToggleButton fx:id="mapModeButton" text="Map" selected="true" toggleGroup="$mapModeGroup"
+                                  styleClass="segment segment-left"/>
+                    <ToggleButton fx:id="satelliteModeButton" text="Satellite" toggleGroup="$mapModeGroup"
+                                  styleClass="segment segment-right"/>
+                </HBox>
+
+                <!-- Zoom / locate controls -->
+                <VBox spacing="0" styleClass="map-controls" StackPane.alignment="BOTTOM_RIGHT"
+                      maxWidth="-Infinity" maxHeight="-Infinity">
+                    <StackPane.margin>
+                        <Insets right="14" bottom="72"/>
+                    </StackPane.margin>
+                    <Button text="+" styleClass="map-control-button" onAction="#onZoomIn"/>
+                    <Separator/>
+                    <Button text="−" styleClass="map-control-button" onAction="#onZoomOut"/>
+                    <Separator/>
+                    <Button text="◎" styleClass="map-control-button" onAction="#onLocate"/>
+                </VBox>
+
+                <!-- Location banner -->
+                <HBox fx:id="locationBanner" spacing="10" alignment="CENTER_LEFT" styleClass="banner banner-warn"
+                      StackPane.alignment="BOTTOM_LEFT" maxWidth="460" maxHeight="-Infinity">
+                    <StackPane.margin>
+                        <Insets left="14" bottom="14"/>
+                    </StackPane.margin>
+                    <Label fx:id="bannerIcon" text="!" styleClass="banner-icon"/>
+                    <VBox spacing="1" HBox.hgrow="ALWAYS">
+                        <Label fx:id="bannerTitle" text="Waiting for restaurant data" styleClass="banner-title"/>
+                        <Label fx:id="bannerText" text="The map will update as soon as locations load."
+                               styleClass="banner-text" wrapText="true"/>
+                    </VBox>
+                </HBox>
+            </StackPane>
+        </HBox>
+    </center>
+</BorderPane>

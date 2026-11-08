@@ -1,0 +1,329 @@
+/* ===== Page Root & Scroll ===== */
+.page-scroll {
+    -fx-background: #CBC7BF;
+    -fx-background-color: #CBC7BF;
+    -fx-border-color: transparent;
+}
+
+.page-root {
+    -fx-background-color: #CBC7BF;
+}
+
+/* ===== Top Navbar ===== */
+.top-navbar {
+    -fx-background-color: #FAF9F6;
+    -fx-background-radius: 18px;
+    -fx-border-color: #E2DFD9;
+    -fx-border-radius: 18px;
+    -fx-border-width: 1px;
+}
+
+.brand-badge {
+    -fx-background-color: #B3262E;
+    -fx-background-radius: 10px;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: 800;
+    -fx-font-size: 13px;
+}
+
+.portal-kicker {
+    -fx-text-fill: #B3262E;
+    -fx-font-size: 9.5px;
+    -fx-font-weight: 800;
+    -fx-letter-spacing: 0.6px;
+}
+
+.portal-brand {
+    -fx-text-fill: #111111;
+    -fx-font-size: 16px;
+    -fx-font-weight: 800;
+}
+
+.help-btn {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 999px;
+    -fx-border-color: #DFDCD6;
+    -fx-border-radius: 999px;
+    -fx-padding: 7px 14px;
+    -fx-text-fill: #111111;
+    -fx-font-weight: 700;
+    -fx-font-size: 12.5px;
+    -fx-graphic-text-gap: 6px;
+    -fx-cursor: hand;
+}
+
+.help-btn:hover {
+    -fx-background-color: #F3F1EC;
+}
+
+.help-icon-circle {
+    -fx-border-color: #111111;
+    -fx-border-radius: 999px;
+    -fx-border-width: 1.3px;
+}
+
+.help-icon-question {
+    -fx-text-fill: #111111;
+    -fx-font-size: 10px;
+    -fx-font-weight: 800;
+}
+
+.avatar-badge {
+    -fx-background-color: #B3262E;
+    -fx-background-radius: 999px;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 12px;
+    -fx-font-weight: 800;
+}
+
+/* ===== Left Sidebar ===== */
+.sidebar-card {
+    -fx-background-color: #EFECE6;
+    -fx-background-radius: 20px;
+    -fx-border-color: #E2DFD9;
+    -fx-border-radius: 20px;
+    -fx-border-width: 1px;
+}
+
+.section-kicker {
+    -fx-text-fill: #B3262E;
+    -fx-font-size: 10px;
+    -fx-font-weight: 800;
+    -fx-letter-spacing: 0.5px;
+}
+
+.sidebar-title {
+    -fx-text-fill: #111111;
+    -fx-font-size: 20px;
+    -fx-font-weight: 800;
+}
+
+.sidebar-subtitle {
+    -fx-text-fill: #6E6A63;
+    -fx-font-size: 12.5px;
+    -fx-line-spacing: 2px;
+}
+
+.sidebar-action-btn {
+    -fx-background-color: #FAF9F6;
+    -fx-background-radius: 999px;
+    -fx-border-color: #DFDCD6;
+    -fx-border-radius: 999px;
+    -fx-padding: 9px 16px;
+    -fx-text-fill: #111111;
+    -fx-font-size: 12.5px;
+    -fx-font-weight: 700;
+    -fx-graphic-text-gap: 7px;
+    -fx-cursor: hand;
+}
+
+.sidebar-action-btn:hover {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #C9C5BD;
+}
+
+.sidebar-btn-icon {
+    -fx-fill: transparent;
+    -fx-stroke: #111111;
+    -fx-stroke-width: 2.0;
+}
+
+/* ===== Right Main Preview Column ===== */
+.preview-header-card {
+    -fx-background-color: #FAF9F6;
+    -fx-background-radius: 20px;
+    -fx-border-color: #E2DFD9;
+    -fx-border-radius: 20px;
+    -fx-border-width: 1px;
+}
+
+.restaurant-main-title {
+    -fx-text-fill: #111111;
+    -fx-font-size: 28px;
+    -fx-font-weight: 800;
+}
+
+.restaurant-meta-subtitle {
+    -fx-text-fill: #6E6A63;
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+}
+
+/* ===== Cover Photo Banner ===== */
+.cover-container {
+    -fx-background-color: #2B2118;
+    -fx-background-radius: 18px;
+}
+
+.featured-overlay-pill {
+    -fx-background-color: rgba(250, 249, 246, 0.92);
+    -fx-background-radius: 999px;
+    -fx-padding: 6px 12px;
+}
+
+.featured-sparkle {
+    -fx-text-fill: #B3262E;
+    -fx-font-size: 11px;
+    -fx-font-weight: 800;
+}
+
+.featured-pill-text {
+    -fx-text-fill: #B3262E;
+    -fx-font-size: 10.5px;
+    -fx-font-weight: 800;
+    -fx-letter-spacing: 0.4px;
+}
+
+/* ===== Wait / Availability Status Banner (Amber Default, Green Available, Red Full) ===== */
+.wait-banner-amber {
+    -fx-background-color: #EFE0C9;
+    -fx-background-radius: 18px;
+    -fx-border-color: #E4D1B3;
+    -fx-border-radius: 18px;
+    -fx-border-width: 1px;
+}
+
+.wait-kicker-amber {
+    -fx-text-fill: #A85D18;
+    -fx-font-size: 10.5px;
+    -fx-font-weight: 800;
+    -fx-letter-spacing: 0.5px;
+}
+
+.wait-updated-amber {
+    -fx-text-fill: #B26A27;
+    -fx-font-size: 11.5px;
+    -fx-font-weight: 500;
+}
+
+.wait-headline-amber {
+    -fx-text-fill: #A85D18;
+    -fx-font-size: 24px;
+    -fx-font-weight: 600;
+}
+
+.wait-subtext-amber {
+    -fx-text-fill: #A85D18;
+    -fx-font-size: 12.5px;
+    -fx-font-weight: 500;
+}
+
+/* Green state when tables are immediately free with 0 wait */
+.wait-banner-green {
+    -fx-background-color: #DCEFE2;
+    -fx-background-radius: 18px;
+    -fx-border-color: #C5E3CE;
+    -fx-border-radius: 18px;
+    -fx-border-width: 1px;
+}
+
+.wait-text-green {
+    -fx-text-fill: #1E6F43;
+}
+
+/* ===== Distance & Hours Mini Cards ===== */
+.info-mini-card {
+    -fx-background-color: #EFECE6;
+    -fx-background-radius: 16px;
+    -fx-border-color: #E2DFD9;
+    -fx-border-radius: 16px;
+    -fx-border-width: 1px;
+}
+
+.info-card-icon {
+    -fx-fill: transparent;
+    -fx-stroke: #B3262E;
+    -fx-stroke-width: 2.0;
+}
+
+.info-card-title {
+    -fx-text-fill: #111111;
+    -fx-font-size: 13.5px;
+    -fx-font-weight: 700;
+}
+
+.info-card-sub {
+    -fx-text-fill: #6E6A63;
+    -fx-font-size: 12px;
+}
+
+/* ===== Directions / Address Row ===== */
+.pin-icon-circle {
+    -fx-background-color: #FAF9F6;
+    -fx-background-radius: 999px;
+    -fx-border-color: #E2DFD9;
+    -fx-border-radius: 999px;
+}
+
+.pin-svg {
+    -fx-fill: transparent;
+    -fx-stroke: #6E6A63;
+    -fx-stroke-width: 1.8;
+}
+
+.directions-kicker {
+    -fx-text-fill: #6E6A63;
+    -fx-font-size: 11.5px;
+}
+
+.directions-address {
+    -fx-text-fill: #111111;
+    -fx-font-size: 13.5px;
+    -fx-font-weight: 800;
+}
+
+/* ===== Amenity Chips ===== */
+.amenity-chip {
+    -fx-background-color: #FAF9F6;
+    -fx-background-radius: 999px;
+    -fx-border-color: #DFDCD6;
+    -fx-border-radius: 999px;
+    -fx-padding: 6px 14px;
+    -fx-text-fill: #111111;
+    -fx-font-size: 12px;
+    -fx-font-weight: 600;
+}
+
+.featured-chip-dark {
+    -fx-background-color: #181818;
+    -fx-background-radius: 999px;
+    -fx-padding: 6px 14px;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 12px;
+    -fx-font-weight: 700;
+}
+
+/* ===== Bottom Primary CTA Button ===== */
+.primary-directions-btn {
+    -fx-background-color: #B3262E;
+    -fx-background-radius: 999px;
+    -fx-padding: 14px 24px;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 13.5px;
+    -fx-font-weight: 700;
+    -fx-graphic-text-gap: 8px;
+    -fx-cursor: hand;
+}
+
+.primary-directions-btn:hover {
+    -fx-background-color: #9A1F26;
+}
+
+.primary-btn-icon {
+    -fx-fill: transparent;
+    -fx-stroke: #FFFFFF;
+    -fx-stroke-width: 2.0;
+}
+
+/* ===== Red state — closed, full, or long wait ===== */
+.wait-banner-red {
+    -fx-background-color: #F7DADD;
+    -fx-background-radius: 18px;
+    -fx-border-color: #EBC1C5;
+    -fx-border-radius: 18px;
+    -fx-border-width: 1px;
+}
+
+.wait-text-red {
+    -fx-text-fill: #8E1A21;
+}

@@ -1,0 +1,362 @@
+/* ==========================================================================
+   GLOBAL THEME INTEGRATION (From your Pasted text.txt)
+   ========================================================================== */
+.root {
+    -fx-font-family: "Inter", "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 14px;
+
+    /* Theme colors */
+    -color-bg: #e9e7e4;
+    -color-surface: #FFFFFFC9;
+    -color-primary: #B3262E;
+    -color-primary-hover: #9A1F26;
+    -color-text: #111111;
+    -color-muted: #000;
+    -color-border: #CBC7BF;
+    -color-sidebar: #FFB600;
+    -color-danger: #DC3545;
+}
+
+/* ==========================================================================
+   PAGE LAYOUT
+   ========================================================================== */
+.root-container {
+    -fx-background-color: -color-bg;
+}
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+.header {
+    -fx-background-color: -color-surface;
+    -fx-border-color: -color-border;
+    -fx-border-width: 0 0 1 0;
+}
+
+.logo-icon {
+    -fx-background-color: -color-primary;
+    -fx-text-fill: white;
+    -fx-padding: 5 10 5 10;
+    -fx-background-radius: 5;
+    -fx-font-size: 16px;
+}
+
+.header-brand-small {
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-text;
+    -fx-opacity: 0.6;
+}
+
+.header-brand-large {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-text;
+}
+
+.header-icon-button {
+    -fx-background-color: transparent;
+    -fx-border-color: -color-border;
+    -fx-border-radius: 20;
+    -fx-min-width: 36; -fx-min-height: 36;
+    -fx-background-radius: 20;
+    -fx-text-fill: -color-text;
+    -fx-cursor: hand;
+}
+
+.header-profile-button {
+    -fx-background-color: -color-primary;
+    -fx-text-fill: white;
+    -fx-border-radius: 20;
+    -fx-min-width: 36; -fx-min-height: 36;
+    -fx-background-radius: 20;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+/* ==========================================================================
+   SIDEBAR
+   ========================================================================== */
+.sidebar {
+    -fx-padding: 0 10 0 0;
+}
+
+.sidebar-title {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-text;
+    -fx-opacity: 0.6;
+}
+
+.featured-title
+{
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-bg;
+}
+
+.sidebar-heading {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-text;
+}
+
+.sidebar-subtitle {
+    -fx-font-size: 13px;
+    -fx-text-fill: -color-text;
+    -fx-opacity: 0.8;
+}
+
+/* Sidebar Steps */
+.step-box {
+    -fx-background-color: -color-surface;
+    -fx-padding: 15;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: transparent;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 5, 0, 0, 2);
+}
+.step-box-active {
+    -fx-background-color: -color-primary;
+     -fx-padding: 15;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: transparent;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 5, 0, 0, 2);
+}
+
+.active-step {
+    -fx-border-color: -color-border;
+}
+
+.step-circle {
+    -fx-background-color: derive(-color-bg, -10%); /* Slightly darker than bg */
+    -fx-text-fill: -color-text;
+    -fx-background-radius: 15;
+    -fx-min-width: 30; -fx-min-height: 30;
+    -fx-alignment: center;
+    -fx-font-weight: bold;
+}
+.step-circle-active {
+    -fx-background-color: -color-primary;
+    -fx-text-fill: white;
+    -fx-background-radius: 15;
+    -fx-min-width: 30; -fx-min-height: 30;
+    -fx-alignment: center;
+    -fx-font-weight: bold;
+}
+
+.active-circle {
+    -fx-background-color: -color-surface;
+    -fx-text-fill: white;
+}
+
+.step-title {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-text;
+}
+
+.step-subtitle {
+    -fx-font-size: 12px;
+    -fx-text-fill: -color-text;
+    -fx-opacity: 0.7;
+}
+
+.recommended-box {
+    -fx-background-color: -color-accent;
+    -fx-padding: 15;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: -color-primary;
+    -fx-border-width: 1;
+}
+
+.recommended-label {
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-primary;
+}
+
+.selected-text {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-text;
+}
+
+.billing-box {
+    -fx-background-color: -color-surface;
+    -fx-padding: 15;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.05), 5, 0, 0, 2);
+}
+
+/* Quick Login Input Fields */
+.input-label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-text;
+    -fx-opacity: 0.8;
+}
+
+.input-field {
+    -fx-background-color: -color-bg;
+    -fx-background-radius: 8;
+    -fx-border-color: -color-border;
+    -fx-border-radius: 8;
+    -fx-border-width: 1;
+    -fx-padding: 10 12;
+    -fx-font-size: 13px;
+    -fx-text-fill: -color-text;
+}
+
+.input-field:focused {
+    -fx-border-color: -color-primary;
+    -fx-background-color: white;
+}
+
+.btn-quick-login {
+    -fx-background-color: -color-primary;
+    -fx-background-radius: 8;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-padding: 12;
+    -fx-cursor: hand;
+}
+
+.btn-quick-login:hover {
+    -fx-background-color: -color-primary-hover;
+}
+
+/* ==========================================================================
+   RIGHT CONTENT (PLANS)
+   ========================================================================== */
+.right-content {
+    -fx-background-color: transparent;
+}
+
+.step-indicator {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-primary;
+}
+
+.main-heading {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-text;
+}
+
+.main-subtitle {
+    -fx-font-size: 14px;
+    -fx-text-fill: -color-text;
+    -fx-opacity: 0.8;
+}
+
+/* Plan Cards Base */
+.plan-card {
+    -fx-background-color: -color-surface;
+    -fx-padding: 25;
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.08), 10, 0, 0, 4);
+    -fx-min-height: 400;
+}
+
+.plan-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-text;
+}
+
+.plan-price {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -color-text;
+}
+
+.plan-desc {
+    -fx-font-size: 14px;
+    -fx-text-fill: -color-text;
+    -fx-opacity: 0.8;
+}
+
+.feature-list {
+    -fx-padding: 15 0 0 0;
+}
+
+.check-icon {
+    -fx-text-fill: -color-text;
+    -fx-font-weight: bold;
+}
+
+.feature-text {
+    -fx-font-size: 13px;
+    -fx-text-fill: -color-text;
+}
+.featured-text {
+    -fx-font-size: 13px;
+    -fx-text-fill: -color-bg;
+}
+
+
+/* Plan Buttons */
+.btn-choose-essential {
+    -fx-background-color: transparent;
+    -fx-border-color: -color-border;
+    -fx-border-radius: 25;
+    -fx-background-radius: 25;
+    -fx-text-fill: -color-text;
+    -fx-font-weight: bold;
+    -fx-padding: 12;
+    -fx-cursor: hand;
+}
+
+.btn-choose-essential:hover {
+    -fx-background-color: derive(-color-surface, -10%);
+}
+
+.btn-continue-featured {
+    -fx-background-color: -color-primary;
+    -fx-background-radius: 25;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 12;
+    -fx-cursor: hand;
+}
+
+.btn-continue-featured:hover {
+    -fx-background-color: -color-primary-hover;
+}
+
+/* ==========================================================================
+   FEATURED CARD OVERRIDES (DARK THEME)
+   ========================================================================== */
+.featured-card {
+    -fx-background-color: -color-primary;
+    -fx-text-fill: -color-bg;
+    -fx-padding: 25;
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.08), 10, 0, 0, 4);
+    -fx-min-height: 400;
+}
+
+.featured-text {
+    -fx-text-fill: #ffffff;
+}
+
+.featured-desc {
+    -fx-text-fill: #ffffff;
+}
+
+.badge-recommended {
+    -fx-background-color: -color-bg;
+    -fx-text-fill: -color-primary;
+    -fx-border-color: -color-primary;
+    -fx-border-width: 1;
+    -fx-padding: 4 10 4 10;
+    -fx-background-radius: 32;
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-translate-y: -40;
+}

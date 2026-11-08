@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch4jConfig>
+  <dontWrapJar>false</dontWrapJar>
+  <headerType>gui</headerType>
+  <jar>D:\Coding\Repos\Uni\OOP Project\Asanni-Dashboard\asanni-dashboard\target\asanni-dashboard-1.0.0.jar</jar>
+  <outfile>D:\Coding\Repos\Uni\OOP Project\Outputs\Asanni1.exe</outfile>
+  <errTitle></errTitle>
+  <cmdLine></cmdLine>
+  <chdir>.</chdir>
+  <priority>normal</priority>
+  <downloadUrl></downloadUrl>
+  <supportUrl></supportUrl>
+  <stayAlive>false</stayAlive>
+  <restartOnCrash>false</restartOnCrash>
+  <manifest></manifest>
+  <icon>D:\Coding\Repos\Uni\OOP Project\Asanni-Dashboard\asanni-dashboard\src\main\resources\icon.ico</icon>
+  <var>FIREBASE_PROJECT_ID=asanni-6e242</var>
+  <var>FIREBASE_CLIENT_EMAIL=firebase-adminsdk-fbsvc@asanni-6e242.iam.gserviceaccount.com</var>
+  <var>FIREBASE_PRIVATE_KEY=&quot;-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDDZo82SMTLEUTr\nWyGG076EA8O7I7+j09/AdbilPZAEAcnuMVL1ltEvP0wqjBBayXUbzR2broZHpAKs\n8ZR4DTbYDgv9KYmgY2uI68QF2dT3OwtXBbQViJvY9dEb7KbiPtQX4X2xWkMWg3eT\nbuaB7O05nNaovqYoL1nG6Thd24uOxfqUbwkJjoCxyAKsELrrVZDe7nsOMA6rQcMn\nsnAwuqYxrLKdxdToC/50n8fOvbSzYxcmJDvTdvlYzFIn4UMbVgGVftbrwNcGMWqx\nO7woEmrQa55KCohAk7r8aTkGlwV0vmtNybm3jVm4rP4lPp3qWRQKQUBJrQ60lBiA\nQHDAXgVJAgMBAAECggEABaS/KyVekFzkfYW0H1rwluCC9TM69DuI1rFaZA9goEpV\nmjcQ0H4KzE9gNEm3qTTwrce2p19FipPT7fR2QiIOPPQ+6BDHOaYqyMQXynF4WKxQ\nZLLfTiXpa71BzQmAkmqXy+7GfL+reLQoWSOWrcGkN7SYxeaSZvkNzJRs0oJ7nTkm\npbZSJb+Bhgm6IGjVBStUmafaxKMEAcBIWLRX/S7P71LRRt/KGv6F0xWFIIZsPE0b\nGUBb7fBL0bBjY9rGvxOFeloXSu8swpl41RuWYBwq06IxT8KKTtcJ524Phb15nYtw\nYYFH9XnBdf/ca2c28WFRL8FCXCoNEID5cp5UNj+m3wKBgQDyXBGDoPKc2qSC2fzj\nHnU6gAcWDt4hI9ADLWpXS4FKjuMM7YA6/ytV0cxpa6ozRS2SDGfMxf9V1VG/lu0p\naBE1K3uaRQbQ62ms/hC9R2+xRtkfRtxUrp1jsiH6wQd+St2TtzALm2d4x2FnCA0U\nRQNciiM5F3qXG9GaZR2akQ4XqwKBgQDOZecb3I//Ib0SkVKEVIbVxnbPzG3E8QKy\n7ZZ4INPFhBM1P/Z8BtzOYMdNnDvdNdrlPECXOcw+9Z8rLqEFxXIfFvYwRdOatDWG\nk3DaW0yDa6KNiQzJSEA4b3+gCYLm5KtoOE+urxCV+zFAKNoH+etQQI79Jy/A+7uU\nOpay2jFS2wKBgQDtYsDE7SC2AnKguGO7ElpAsqY+NNHeI/XbJuDCIHLDVLGQOBEh\nuE36AUT2/T34egnow73oFQfESu2He41QwV4Zdj3bHUFP4UXg6/n5a787JOoGeKHX\nUDFZNWGS+v8b9LiTtxqYQ99VrfT5tikZcX+ZZLSbdyPcXqMvV1tnyizDgQKBgQCh\nG4HuiZgM+nTvjWfvy1sEe0o6ocP9OnN032fYlSc4wgOMSUVJQsIQhhKMTiucXHFl\nBkcUxBTeADQiLN+b9adDBVVeEOM/mvM8/NHWX/W1j8ru18+XPkKCyuXAMixvtobl\nby8jl5tGtzCWeEzYdQhtODdk+7WW2ehtp94B9bcSiQKBgQDivdgNtPt6OwTDWMnU\nk6gcfIOSPTUZWJAn6lwQNC8dPGy4hUDQGxdFSZrVkzW3oafoiyR5vqTq+8wDPkbW\n0+afWiSR2e00tMnBIbxWvSFAJK+LK9kmT9OiYO6f6SFokAazmYkHTEPdrv/bihDX\nQSGS8gZVk1qf8DNU1SRouKfWnw==\n-----END PRIVATE KEY-----\n&quot;</var>
+  <singleInstance>
+    <mutexName>Asanni</mutexName>
+    <windowTitle>Asaani</windowTitle>
+  </singleInstance>
+  <jre>
+    <path>%JAVA_HOME%;%PATH%</path>
+    <requiresJdk>true</requiresJdk>
+    <requires64Bit>true</requires64Bit>
+    <minVersion></minVersion>
+    <maxVersion></maxVersion>
+    <opt>-Denv.java.home\bin=&quot;%JAVA_HOME\bin%&quot;</opt>
+  </jre>
+</launch4jConfig>
